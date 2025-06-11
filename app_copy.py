@@ -125,7 +125,7 @@ queries = ['earn', 'acq', 'money-fx', 'grain', 'crude', 'trade', 'interest', 'sh
 
 st.sidebar.title("Mode Aplikasi")
 mode = st.sidebar.radio("Pilih Mode:", ["Search Engine", "Klasifikasi Dokumen"])
-selected_query = st.sidebar.selectbox("Pilih Query/Kategori:", queries)
+# selected_query = st.sidebar.selectbox("Pilih Query/Kategori:", queries)
 
 # --- Tampilan Berdasarkan Mode ---
 if mode == "Search Engine":
@@ -141,9 +141,9 @@ if mode == "Search Engine":
         st.metric("Presisi", f"{se_prec:.4f}")
         st.metric("Recall", f"{se_rec:.4f}")
         st.write("Jumlah dokumen ditemukan:", len(retrieved_docs))
-        st.write("Contoh Dokumen:")
-        for doc_id in retrieved_docs[:5]:
-            st.markdown(f"- `{doc_id}`")
+        # st.write("Contoh Dokumen:")
+        # for doc_id in retrieved_docs[:5]:
+        #     st.markdown(f"- `{doc_id}`")
 
 
 elif mode == "Klasifikasi Dokumen":
